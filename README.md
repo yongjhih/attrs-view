@@ -9,10 +9,6 @@ Allow annotate attrs for code-gen views.
 SimpleView extends View {
   @ColorAttr("text_color")
   int textColor;
-  
-  public void setTextColor(int color) {
-    textColor = color;
-  }
 }
 ```
 
@@ -22,7 +18,19 @@ SimpleView extends View {
 />
 ```
 
+## Development
+
 ```java
-SimpleView simpleView = (SimpleView) findViewById(R.id.simple_view);
-simpleView.setColor(Color.parse("#ffff"));
-```
+// Generated SimpleViewAttrs
+SimpleViewAttrs extends SimpleView {
+
+  public SimpleViewAttrs(@NonNull Context context, AttributeSet attrs, int defStyleAttr) {
+    super(context, attrs, defStyleAttr);
+    init(context.obtainStyledAttributes(attrs, R.styleable.SimpleView));
+  }
+
+  private void init(TypedArray attrs) {
+    textColor = attrs.getColor(R.styleable.SimpleView_text_color, textColor);
+  }
+
+}
