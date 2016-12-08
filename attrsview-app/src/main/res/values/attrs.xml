@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="simple">
+    <attr format="string" name="attrs_view_text"/>
+    <attr format="color" name="attrs_view_text_color"/>
+  </declare-styleable>
+</resources>

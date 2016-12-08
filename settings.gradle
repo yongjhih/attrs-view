@@ -1,1 +1,1 @@
-include ':attrsview-processor', ':attrsview-annotation'
+include ':attrsview-processor', ':attrsview-annotation', ':attrsview-app'
