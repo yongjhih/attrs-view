@@ -34,3 +34,8 @@ SimpleViewAttrs extends SimpleView {
   }
 
 }
+```
+
+## See Also
+
+Already implemented! https://github.com/pavel163/AttributesDispatcher
